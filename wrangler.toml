@@ -21,7 +21,7 @@ enabled = true
 # Docs: https://developers.cloudflare.com/workers/wrangler/configuration/#kv-namespaces
 [[kv_namespaces]]
 binding = "NZ_BOT_STORE"
-id = "76dad1c427d24867a1a3584e71d973aa"
+id = "ebb01e5d275141c39752641a980efe33"
 
 [vars]
 NZ_BASEURL="https://www.example.com"
