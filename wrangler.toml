@@ -1,0 +1,33 @@
+#:schema node_modules/wrangler/config-schema.json
+name = "plain-nezha-bot"
+main = "src/index.ts"
+compatibility_date = "2024-12-05"
+compatibility_flags = ["nodejs_compat"]
+
+# Workers Logs
+# Docs: https://developers.cloudflare.com/workers/observability/logs/workers-logs/
+# Configuration: https://developers.cloudflare.com/workers/observability/logs/workers-logs/#enable-workers-logs
+[observability]
+enabled = true
+
+# Bind a D1 database. D1 is Cloudflare’s native serverless SQL database.
+# Docs: https://developers.cloudflare.com/workers/wrangler/configuration/#d1-databases
+# [[d1_databases]]
+# binding = "MY_DB"
+# database_name = "my-database"
+# database_id = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+
+# Bind a KV Namespace. Use KV as persistent storage for small key-value pairs.
+# Docs: https://developers.cloudflare.com/workers/wrangler/configuration/#kv-namespaces
+[[kv_namespaces]]
+binding = "NZ_BOT_STORE"
+id = "76dad1c427d24867a1a3584e71d973aa"
+
+[vars]
+NZ_BASEURL="https://www.example.com"
+LANG="en"
+ENDPOINT_PATH = "/endpoint"
+TZ="UTC"
+
+[triggers]
+crons = ["*/30 * * * *"]

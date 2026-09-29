@@ -1,0 +1,22 @@
+{
+	"name": "plain-nezha-bot",
+	"version": "0.0.0",
+	"private": true,
+	"scripts": {
+		"deploy": "wrangler deploy",
+		"dev": "wrangler dev",
+		"start": "wrangler dev",
+		"test": "vitest",
+		"cf-typegen": "wrangler types"
+	},
+	"devDependencies": {
+		"@cloudflare/vitest-pool-workers": "^0.8.34",
+		"typescript": "^5.8.3",
+		"vitest": "3.0.9",
+		"wrangler": "^4.18.0"
+	},
+	"dependencies": {
+		"@vlad-yakovlev/telegram-md": "^2.0.0",
+		"i18next": "^24.2.3"
+	}
+}
